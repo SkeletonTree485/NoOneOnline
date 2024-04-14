@@ -1,2 +1,2 @@
 # NoOneOnline
-Veškeré informace k servival serveru NoOneOnline
+Veškeré informace k survival serveru NoOneOnline
