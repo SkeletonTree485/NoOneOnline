@@ -1,2 +1,2 @@
 # NoOneOnline
-No One Online resourcepack
+Veškeré informace k serveru NoOneOnline
