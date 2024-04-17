@@ -1,0 +1,1 @@
+info k sezóně
