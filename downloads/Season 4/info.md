@@ -1,4 +1,4 @@
-#Info ke čtvrté sezóně NoOneOnline survival:
+#Info ke čtvrté sezóně NoOneOnline Survival:
 Začátek: x. x. 2024
 Konec: x. x. 2025
 
