@@ -1,5 +1,5 @@
 #Info ke čtvrté sezóně NoOneOnline Survival:
-Začátek: x. x. 2024
+Začátek: 21. 7. 2024
 Konec: x. x. 2025
 
  
