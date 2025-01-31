@@ -1,4 +1,4 @@
 @font-face {
-    font-family: 'Minecraft7';
-    src: url('fonts/Minecraft-Seven_v2.woff2') format('truetype'); /* Adjust path and format as needed */
+    font-family: 'Minecraft-Seven_v2';
+    src: url('fonts/Minecraft-Seven_v2.woff2') format('woff2'); /* Adjust path and format as needed */
 }
