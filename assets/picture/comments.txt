@@ -1,0 +1,4 @@
+background - website backgrounds
+showcase - pictures - gameplay, for blog, etc.
+renders - just for org. can be used for background / showcase
+misc - random stuff
