@@ -32,7 +32,7 @@
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" /><defs
+     inkscape:current-layer="layer2" /><defs
      id="defs1"><inkscape:path-effect
        effect="fillet_chamfer"
        id="path-effect6"
@@ -88,7 +88,7 @@
      inkscape:label="Layer 2"
      transform="matrix(0.74133439,0,0,0.41472895,2.8076171e-7,-9.0090081)"
      style="fill:#ffffff"><rect
-       style="fill:#ffffff;stroke-width:0.349389"
+       style="fill:none;stroke-width:0.349389"
        id="rect1"
        width="269.89474"
        height="480.0274"
