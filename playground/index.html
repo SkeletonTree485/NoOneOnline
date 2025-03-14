@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NoOneOnline</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://no1online.cz/assets/logo/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://no1online.cz/assets/logo/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://no1online.cz/assets/logo/favicon/favicon-16x16.png">
@@ -12,13 +13,13 @@
 
         @font-face {
             font-family: 'Minecraft7';
-            src: url("assets/font/Minecraft7.woff2") format('woff2'),
-                 url("assets/font/Minecraft7.woff") format('woff'),
-                 url("assets/font/Minecraft7.ttf") format('truetype');
+            src: url("https://no1online.cz/assets/font/Minecraft7.woff2") format('woff2'),
+                 url("https://no1online.cz/assets/font/Minecraft7.woff") format('woff'),
+                 url("https://no1online.cz/assets/font/Minecraft7.ttf") format('truetype');
         }
 
         body {
-            background-image: url("assets/picture/background/squid-underwater-deepblue-kelp-shader.png");
+            background-image: url("https://no1online.cz/assets/picture/background/squid-underwater-deepblue-kelp-shader.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -88,10 +89,19 @@
     </style>
 </head>
 <body>
-    <img src="assets/logo/N1O-logo-web.png" alt="NoOneOnline Logo">
-    <h1></h1>
+    <div class="top-bar">
+        <div class="left-content">
+          <a href="#test1">Home</a>
+          <a href="#test2">test2</a>
+        </div>
+        <div class="right-content">
+          <a href="#test3">test1</a>
+          <a href="#test4">test2</a>
+        </div>
+      </div>
+    <img src="https://no1online.cz/assets/logo/N1O-logo-web.png" alt="NoOneOnline Logo">
     <div>
-    <p>Under construction...</p>
+        <p>Under construction...</p>
     </div>
     <div style="padding: 30px">
         <button class="button button2" onclick="window.open('http://test.no1online.cz:8085', '_blank');">

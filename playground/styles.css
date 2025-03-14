@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .top-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 1000; /* Ensures it appears above other content */
+  }
+  
+  .top-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 16px;
+  }
+  
+  .top-bar a:hover {
+    background-color: #555;
+    border-radius: 4px;
+  }
+  
+  .content {
+    padding: 80px 20px; /* Add padding so content isn't hidden under the bar */
+  }
+  
