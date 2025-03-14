@@ -45,7 +45,7 @@ p {
     margin: 5px;
     transition: 0.3s;
     cursor: pointer;
-    border-radius: 0px;
+    border-radius: 0;
     font-family: 'Minecraft7', sans-serif;
 }
 .button1 {
@@ -72,36 +72,56 @@ p {
   .top-bar {
     background-color: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 1px 15px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: left;
+    align-items: bottom;
     position: fixed; /* Fixed position at the top */
     top: 0;
     left: 0;
     right: 0;
-    height: 70px;
-    z-index: 1000; /* Ensures it appears above other content */
+    height: 68px;
+    font-size: x-large;
+    }
+
+  .logo {
+    height: 64px; /* Adjust logo height */
+    margin-right: 9px; /* Space between logo and links */
   }
+
   
-  .top-bar a {
-    color: white;
-    text-decoration: none;
-    padding: 0 15px;
-    font-size: 16px;
-  }
+.nav-links {
+  display: flex;
+  align-items: center; /* Ensure links align with the logo */
+}
+
+.left-content {
+  display: flex;
+  align-items: center; /* Vertically align logo and links */
+  gap: 5px;
+}
+
+.right-content {
+  display: flex;
+  align-items: center; /* Vertically align logo and links */
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: x-large;;
+}
+
+.top-bar a:hover {
+  /*background-color: #555;*/
+  text-decoration: underline;
+  border-radius: 4px;
+  text-shadow: 0 0 1px #d3d3d3, 0 0 9px #acacac, 0 0 15px #a7a7a7;
   
-  .top-bar a:hover {
-    background-color: #555;
-    border-radius: 4px;
-  }
-  
-  .content {
-    padding: 80px 20px; /* Add padding so content isn't hidden under the bar */
-  }
+}
   .img-logo {
     width: 504px;
     height: 152px;
     margin: 1px;
 }
-  
