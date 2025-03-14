@@ -27,11 +27,11 @@ p {
     margin-bottom: 30px;
     color: white;
 }
-img {
+/*img {
     width: 504px;
     height: 152px;
     margin: 1px;
-}
+}*/
 
 .container {
     display: flex;
@@ -105,4 +105,9 @@ img {
   .content {
     padding: 80px 20px; /* Add padding so content isn't hidden under the bar */
   }
+  .img-logo {
+    width: 504px;
+    height: 152px;
+    margin: 1px;
+}
   
