@@ -27,12 +27,6 @@ p {
     margin-bottom: 30px;
     color: white;
 }
-/*img {
-    width: 504px;
-    height: 152px;
-    margin: 1px;
-}*/
-
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -86,7 +80,7 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 70px;
     z-index: 1000; /* Ensures it appears above other content */
   }
   
