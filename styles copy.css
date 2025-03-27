@@ -12,12 +12,13 @@
    General Styles
 ======================== */
 html, body {
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
 
 body {
+    margin: 1vh;
     background-image: url("https://no1online.cz/assets/picture/background/squid-underwater-deepblue-kelp-shader.png");
     background-size: cover;
     background-position: center;
@@ -37,7 +38,6 @@ h1 {
 }
 
 p {
-    margin-bottom: 30px;
     color: white;
     font-size: x-large;
 }
@@ -76,7 +76,6 @@ a:hover {
     justify-content: left;
     align-items: bottom;
     position: fixed;
-    top: 0;
     left: 0;
     right: 0;
     height: 50px;
@@ -116,8 +115,6 @@ a:hover {
    Bottom Bar
 ======================== */
 .bottom-bar {
-    left: 0;
-    bottom: 0;
     width: 100%;
     background-color: #333;
     color: white;
@@ -131,39 +128,40 @@ a:hover {
    Buttons
 ======================== */
 .button {
-    margin-top: 57px;
     border: none;
-    color: white;
-    justify-content: center;
-    align-items: center;
+    color: rgb(111, 111, 111);
+    display: inline;
     min-width: 250px;
-    min-height: 64px;
+    min-height: 60px;
     padding: 16px 32px;
     text-align: center;
     font-size: x-large;
-    margin: 5px;
-    transition: 0.3s;
+    margin: 0.25rem;
+    transition: 0.3, ease;
     cursor: pointer;
-    border-radius: 0;
+    border-radius: 0px;
     font-family: 'Minecraft7', sans-serif;
 }
 
 .button1 {
-    background-color: white;
-    color: black;
-    border: 2px solid #00AAAA;
+        background-color: rgb(106, 102, 102, 0.3);
+        color: rgb(255, 255, 255);
+        border: 3px solid #222;
+        border-radius: 0;
 }
 
 .button1:hover {
     background-color: #00AAAA;
     color: white;
+    text-decoration: underline;
+    text-shadow: 0 0 1px #d3d3d3, 0 0 9px #acacac, 0 0 15px #a7a7a7;
 }
 
 .button2 {
     background-color: rgb(106, 102, 102, 0.3);
-    color: rgb(255, 255, 255);
-    border: 3px solid #222;
-    border-radius: 0;
+            color: rgb(255, 255, 255);
+            border: 3px solid #222;
+            border-radius: 0;
 }
 
 .button2:hover {
