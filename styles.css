@@ -58,6 +58,7 @@ a:hover {
 .content {
     flex: 1;
     padding-top: 123px;
+    padding-bottom: 123px;
 }
 
 .container {
