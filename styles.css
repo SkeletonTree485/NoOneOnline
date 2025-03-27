@@ -42,6 +42,7 @@ a:hover {
 }
 
 .here {
+    /*style link*/
     text-decoration: underline;
     text-shadow: 0 0 1px #d3d3d3, 0 0 9px #acacac, 0 0 15px #a7a7a7;
 }
