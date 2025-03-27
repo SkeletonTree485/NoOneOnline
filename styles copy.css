@@ -159,9 +159,9 @@ a:hover {
 
 .button2 {
     background-color: rgb(106, 102, 102, 0.3);
-            color: rgb(255, 255, 255);
-            border: 3px solid #222;
-            border-radius: 0;
+    color: rgb(255, 255, 255);
+    border: 3px solid #222;
+    border-radius: 0;
 }
 
 .button2:hover {
