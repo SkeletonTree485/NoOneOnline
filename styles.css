@@ -115,9 +115,6 @@ a:hover {
    Bottom Bar
 ======================== */
 .bottom-bar {
-    /*position: fixed;*/
-    left: 0;
-    bottom: 0;
     width: 100%;
     background-color: #333;
     color: white;
@@ -161,9 +158,10 @@ a:hover {
 }
 
 .button2 {
-    background-color: #e6f7fd;
-    color: black;
-    border: 2px solid #008CBA;
+    background-color: rgb(106, 102, 102, 0.3);
+            color: rgb(255, 255, 255);
+            border: 3px solid #222;
+            border-radius: 0;
 }
 
 .button2:hover {
