@@ -75,7 +75,7 @@ a:hover {
     display: flex;
     justify-content: left;
     align-items: bottom;
-    /*position: fixed;*/
+    position: fixed;
     left: 0;
     right: 0;
     height: 50px;
@@ -146,6 +146,8 @@ a:hover {
     cursor: pointer;
     border-radius: 0;
     font-family: 'Minecraft7', sans-serif;
+    text-decoration: underline;
+    text-shadow: 0 0 1px #d3d3d3, 0 0 9px #acacac, 0 0 15px #a7a7a7;
 }
 
 .button1 {
