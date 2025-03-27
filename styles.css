@@ -91,7 +91,7 @@ a:hover {
     right: 0;
     height: 50px;
     font-size: x-large;
-    z-index: 100;
+    z-index: 9999;
 }
 
 .logo {
