@@ -141,6 +141,9 @@ a:hover {
 /* ========================
    Buttons
 ======================== */
+.button-container {
+    padding: 30px
+}
 .button {
     margin-top: 57px;
     border: none;
