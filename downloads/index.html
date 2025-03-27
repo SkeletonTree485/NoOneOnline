@@ -1,93 +1,80 @@
 <!DOCTYPE html>
-                        <!-- Verze 1.1, 5. 2. 2025-->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer">
-    <title>Downloads</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="https://no1online.cz/assets/logo/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://no1online.cz/assets/logo/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://no1online.cz/assets/logo/favicon/favicon-16x16.png">
-    <link rel="manifest" href="https://no1online.cz/assets/logo/favicon/site.webmanifest">
+    <meta name="description" content="Jsme malý Minecraft server zaměřený na vanilla survival. Na této stránce najdeš vše podstatné ohledně naší komunity. ">
+    <meta name="keywords" content="minecraft, no1online, n01online, vanilla, survival, skeletontree485, discord, save, no one online"
+    <meta property="og:title" content="NoOneOnline Minecraft">
+    <meta property="og:description" content="NoOneOnline Website">
+    <meta property="og:image" content="https://www.no1online.cz/assets/logo/favicon/apple-touch-icon.png">
+    <meta property="og:url" content="https://www.no1online.cz">
+    <meta property="og:site_name" content="NoOneOnline">
+    <link rel="stylesheet" href="https://www.no1online.cz/styles.css">    
+    <title>NoOneOnline Minecraft</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.no1online.cz/assets/logo/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.no1online.cz/assets/logo/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.no1online.cz/assets/logo/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://www.no1online.cz/assets/logo/favicon/site.webmanifest">
     <style>
-
         @font-face {
             font-family: 'Minecraft7';
-            src: url("font/Minecraft7.woff2") format('woff2');
-                 font-display: swap;
-        }
-
-        body {
-            background-image: url("https://no1online.cz/assets/picture/background/coral-reef-underwater-blue-reflections-shader.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: top;
+            src: url("https://no1online.cz/assets/font/Minecraft7.woff2") format('woff2'),
+                url("https://no1online.cz/assets/font/Minecraft7.woff") format('woff'),
+                url("/assets/font/Minecraft7.ttf") format('truetype');
+            }
+            .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
             height: 100vh;
-            margin: 0;
-            text-align: center;
-            font-family: 'Minecraft7', sans-serif !important;
-            font-size: x-large;
-        }
-        h1 {
-            margin-bottom: 1px;
-            align-content: start;
-        }
-        p {
-            margin-bottom: 30px;
-            color: black;
-        }
-
-        .button {
-            border: none;
-            color: white;
-            padding: 32px 64px;
-            text-align: center;
-            font-size: x-large;
-            margin: 5px;
-            transition: 0.3s;
-            cursor: pointer;
-            border-radius: 0px;
-            font-family: 'Minecraft7', sans-serif;
-        }
-        .button1 {
-            background-color: white;
-            color: black;
-            /*border: 2px solid #04AA6D;*/
-            border: 2px solid #00AAAA;
-        }
-        .button1:hover {
-            background-color: #00AAAA;
-            color: white;
-        }
-        .button2 {
-            background-color: #e6f7fd;
-            color: black;
-            border: 2px solid #008CBA;
-        }
-        .button2:hover {
-            background-color: #008CBA;
-            color: white;
-        }
+            background-image: url('https://no1online.cz/assets/picture/background/coral-reef-underwater-blue-reflections-shader.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -1; 
+            }
     </style>
 </head>
 <body>
-    <div>
-        <h1>
-            All the downloads
-        <h1>
+    <div class="background"></div>
+    <div class="top-bar">
+        <div class="left-content">
+            <a href="https://no1online.cz">
+                <img class="logo" src="https://no1online.cz/assets/logo/No1Online-logo64.png" alt="NoOneOnline Logo">
+            </a>
+            <span class="divider">|</span>
+            <a class="here" href="https://no1online.cz/downloads">Downloads</a>
+            <span class="divider">|</span>
+            <a href="https://no1online.cz/discord">Discord</a>
+            <span class="divider">|</span>
+            <a href="https://www.no1online.cz/donate">Donate</a>
+            <span class="divider">|</span>
+        </div>
     </div>
-    <div>
-        <p>
-            Under construction...
-        </p>
+    <div class="content">
+        <div>
+            <img src="https://www.no1online.cz/assets/logo/N1O-logo-web.png" alt="NoOneOnline Logo">
+        </div>
+        <div>
+            <h2>All the downloads</h2>
+            <p>
+            Under Construction...
+            </p>
+        </div>
+        <div class="button-container">
+            <p style="font-size: 20;">| Latest Downloads</p>
+            <button class="button button2" onclick="window.open('https://www.icloud.com/iclouddrive/076qkiR9SaoriSnIm6XN0f8gg#NoOneOnlineS4_-_leden_25', '_blank');">
+                Vanilla S4 - 1/2025 
+        </div>
+        <div>
+            <p>
+                More downloads coming soon...
+            </p>
+        </div>
     </div>
-    <div style="padding: 30px; font-size: x-large">
-        <button class="button2" onclick="window.location.href='http://www.no1online.cz'">
-            Go back
-        </button>
-
-        </button1>
+    <div class="bottom-bar">
+        | © 2025 NoOneOnline
     </div>
 </body>
+</html>
