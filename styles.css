@@ -13,6 +13,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
     align-items: center;
     text-align: center;
     background-color: #202d52;
+    color: white;
     font-family: 'Minecraft7', sans-serif !important;
     text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
@@ -56,6 +58,8 @@ a:hover, .here {
 .content {
     flex: 1;
     padding: 123px 0;
+    width: 100vw;
+    box-sizing: border-box;
     position: relative;
     z-index: 1;
 }
@@ -63,15 +67,22 @@ a:hover, .here {
 .container {
     display: flex;
     flex-wrap: wrap;
+    width: 100vw;
+    box-sizing: border-box;
 }
 
+/* ========================
+   Background
+======================== */
 .background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('https://no1online.cz/assets/picture/background/squid-underwater-deepblue-kelp-shader.png') center/cover;
+    background-image: url('https://no1online.cz/assets/picture/background/squid-underwater-deepblue-kelp-shader.png');
+    background-size: cover;
+    background-position: center;
     z-index: -1;
 }
 
@@ -87,10 +98,11 @@ a:hover, .here {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    height: 3.125rem;
+    width: 100vw;
+    height: 3.9rem;
     font-size: 1.5rem;
     z-index: 9999;
+    box-sizing: border-box;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -119,14 +131,13 @@ a:hover, .here {
    Bottom Bar
 ======================== */
 .bottom-bar {
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    width: 100vw;
     background-color: #333;
     color: white;
     padding: 30px;
     text-align: left;
     font-size: 2.25vh;
+    box-sizing: border-box;
     box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -139,7 +150,7 @@ a:hover, .here {
 
 .button {
     margin: 5px;
-    margin-top: 57px;
+    margin-top: 5px;
     padding: 16px 32px;
     min-width: 250px;
     min-height: 64px;
@@ -182,7 +193,9 @@ a:hover, .here {
 .img-logo {
     width: 504px;
     height: 152px;
-    margin: 1px;
+    margin: 1px auto;
+    max-width: 100%;
+    display: block;
 }
 
 /* ========================
@@ -194,6 +207,7 @@ a:hover, .here {
     gap: 5px;
     padding: 1px 11px;
     cursor: pointer;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 .hamburger div {
@@ -201,16 +215,20 @@ a:hover, .here {
     height: 3px;
     background-color: white;
     transition: 0.3s;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
+
 .hamburger:hover div {
     box-shadow: 0 0 10px #fff, 0 0 20px #fff;
 }
+
 /* ========================
    Mobile Styles
 ======================== */
 @media (max-width: 768px) {
     .top-bar {
         justify-content: space-between;
+        height: 4.125rem;
     }
 
     .nav-links {
@@ -220,7 +238,7 @@ a:hover, .here {
         position: absolute;
         top: 50px;
         left: 0;
-        width: 100%;
+        width: 100vw;
         padding: 10px 0;
     }
 
