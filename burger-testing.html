@@ -1,119 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Navbar with Dividers</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #333;
-      padding: 14px 20px;
-      color: white;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      padding: 8px 12px;
-      display: block;
-    }
-
-    .divider {
-      color: white;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      transition: 0.3s;
-    }
-
-    /* Mobile styles */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        width: 100%;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        padding: 10px 0;
-      }
-
-      .nav-links a {
-        padding: 10px 20px;
-      }
-
-      .divider {
-        display: none; /* Hides dividers when in mobile mode */
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jsme malý Minecraft server zaměřený na vanilla survival. Na této stránce najdeš vše podstatné ohledně naší komunity. ">
+    <meta name="keywords" content="minecraft, no1online, n01online, vanilla, survival, skeletontree485, discord, save, no one online"
+    <meta property="og:title" content="NoOneOnline Minecraft">
+    <meta property="og:description" content="NoOneOnline Website">
+    <meta property="og:image" content="https://www.no1online.cz/assets/logo/favicon/apple-touch-icon.png">
+    <meta property="og:url" content="https://www.no1online.cz">
+    <meta property="og:site_name" content="NoOneOnline">
+    <meta name="theme-color" content="#333">
+    <link rel="stylesheet" href="https://no1online.cz/styles.css">    
+    <title>NoOneOnline Minecraft</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.no1online.cz/assets/logo/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.no1online.cz/assets/logo/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.no1online.cz/assets/logo/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://www.no1online.cz/assets/logo/favicon/site.webmanifest">
+    <style>
+        @font-face {
+            font-family: 'Minecraft7';
+            src: url("https://no1online.cz/assets/font/Minecraft7.woff2") format('woff2'),
+                url("https://no1online.cz/assets/font/Minecraft7.woff") format('woff'),
+                url("/assets/font/Minecraft7.ttf") format('truetype');
+            }
+    </style>
 </head>
 <body>
-
-<div class="navbar">
-  <div class="logo">LOGO</div>
-  <div class="hamburger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="nav-links" id="navLinks">
-    <a href="https://no1online.cz">
-        <img class="logo" src="https://no1online.cz/assets/logo/No1Online-logo64.png" alt="NoOneOnline Logo">
-    </a>
-    <span class="divider">|</span>
-    <a href="https://no1online.cz/downloads">Home</a>
-    <span class="divider">|</span>
-    <a href="https://no1online.cz/downloads">Downloads</a>
-    <span class="divider">|</span>
-    <a href="https://www.no1online.cz/servers">Servers</a>
-    <span class="divider">|</span>
-    <a href="https://no1online.cz/discord">Discord</a>
-    <span class="divider">|</span>
-    <a href="https://www.no1online.cz/donate">Donate</a>
-    <span class="divider">|</span>
-  </div>
-</div>
-
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    navLinks.classList.toggle('open');
-  }
-</script>
-
+    <div class="background"></div>
+    <div class="top-bar">
+            <a href="https://no1online.cz">
+                <img class="logo" src="https://no1online.cz/assets/logo/No1Online-logo64.png" alt="NoOneOnline Logo">
+            </a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        <div class="nav-links" id="navLinks">
+            <span class="divider">|</span>
+            <a class="here" href="https://no1online.cz/downloads">Home</a>
+            <span class="divider">|</span>
+            <a href="https://no1online.cz/downloads">Downloads</a>
+            <span class="divider">|</span>
+            <a href="https://www.no1online.cz/servers">Servers</a>
+            <span class="divider">|</span>
+            <a href="https://no1online.cz/discord">Discord</a>
+            <span class="divider">|</span>
+            <a href="https://www.no1online.cz/donate">Donate</a>
+            <span class="divider">|</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="img-logo">
+            <img src="https://www.no1online.cz/assets/logo/N1O-logo-web.png" alt="NoOneOnline Logo">
+        </div>
+        <div>
+            <p>
+            Coming soon...
+            </p>
+        </div>
+        <div class="button-container">
+            <p style="font-size: 20;">| Dynamic Maps</p>
+            <button class="button button2" onclick="window.open('http://creative.no1online.cz:8085', '_blank');">
+                Creative Map
+            </button>
+            <button class="button button2" onclick="window.open('http://vanilla.no1online.cz:36978', '_blank');">
+                Vanilla Map
+            </button>
+        </div>
+        <div>
+            <p style="font-size: 20;">| Latest Downloads</p>
+            <button class="button button2" onclick="window.open('https://www.icloud.com/iclouddrive/076qkiR9SaoriSnIm6XN0f8gg#NoOneOnlineS4_-_leden_25', '_blank');">
+                Vanilla S4 - 1/2025 
+        </div>
+    </div>
+    <div class="bottom-bar">
+        | © 2025 NoOneOnline
+    </div>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('open');
+        }
+        function toggleGlow() {
+        const hamburger = document.getElementById('hamburger');
+        hamburger.classList.toggle('clicked');
+        }
+    </script>
 </body>
 </html>
