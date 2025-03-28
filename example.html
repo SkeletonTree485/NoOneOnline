@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Font Example</title>
-    <style>
-        @font-face {
-        font-family: "Minecraft-Seven_v2";
-        src: url("assets/font/Minecraft-Seven_v2.woff2"), format("woff2");
-        }
-        
-        body {
-            font-family: 'Minecraft-Seven_v2', sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minecraft Server Status</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+    .status {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #e8e8e8;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <a href="index"> Tady je link</a>
+  <h1>Minecraft Server Status</h1>
+  <div id="status" class="status">Loading...</div>
+
+  <script>
+    async function getServerStatus() {
+      const url = 'https://api.mcsrvstat.us/3/vanilla.no1online.cz';
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+
+        const statusElement = document.getElementById('status');
+        if (data.online) {
+          statusElement.innerHTML = `
+            <p><strong>Status:</strong> Online ✅</p>
+            <p><strong>Version:</strong> ${data.version}</p>
+            <p><strong>Players:</strong> ${data.players.online}/${data.players.max}</p>
+            ${data.motd ? `<p><strong>MOTD:</strong> ${data.motd.clean.join('<br>')}</p>` : ''}
+          `;
+        } else {
+          statusElement.innerHTML = `<p><strong>Status:</strong> Offline ❌</p>`;
+        }
+      } catch (error) {
+        document.getElementById('status').innerHTML = `<p>Error: ${error.message}</p>`;
+        console.error('Error fetching server status:', error);
+      }
+    }
+
+    getServerStatus();
+    setInterval(getServerStatus, 30000); // Refresh every 30 seconds
+  </script>
 </body>
 </html>
