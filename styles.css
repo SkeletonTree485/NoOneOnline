@@ -20,7 +20,9 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: #202d52;
     font-family: 'Minecraft7', sans-serif !important;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 /* ========================
@@ -64,12 +66,12 @@ a:hover, .here {
 }
 
 .background {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('https://no1online.cz/assets/picture/background/squid-underwater-deepblue-kelp-shader.png') center/cover;
+    background-image: url('https://no1online.cz/assets/picture/background/squid-underwater-deepblue-kelp-shader.png') center/cover;
     z-index: -1;
 }
 
@@ -122,9 +124,9 @@ a:hover, .here {
     width: 100%;
     background-color: #333;
     color: white;
-    padding: 15px;
+    padding: 30px;
     text-align: left;
-    font-size: 2vh;
+    font-size: 2.25vh;
     box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -200,7 +202,9 @@ a:hover, .here {
     background-color: white;
     transition: 0.3s;
 }
-
+.hamburger:hover div {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
 /* ========================
    Mobile Styles
 ======================== */
