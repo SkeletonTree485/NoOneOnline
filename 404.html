@@ -1,43 +1,84 @@
 <!DOCTYPE html>
-<title>404</title>
-<!-- Verze 404 1.0, 4. 2. 2025-->
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jsme malý Minecraft server zaměřený na vanilla survival. Na této stránce najdeš vše podstatné ohledně naší komunity. ">
+    <meta name="keywords" content="minecraft, no1online, n01online, vanilla, survival, skeletontree485, discord, save, no one online"
+    <meta property="og:title" content="NoOneOnline Minecraft">
+    <meta property="og:description" content="NoOneOnline Website">
+    <meta property="og:image" content="https://www.no1online.cz/assets/logo/favicon/apple-touch-icon.png">
+    <meta property="og:url" content="https://www.no1online.cz">
+    <meta property="og:site_name" content="NoOneOnline">
+    <meta name="theme-color" content="#333">
+    <link rel="stylesheet" href="https://www.no1online.cz/styles.css">    
+    <title>404</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.no1online.cz/assets/logo/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.no1online.cz/assets/logo/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.no1online.cz/assets/logo/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://www.no1online.cz/assets/logo/favicon/site.webmanifest">
     <style>
-        body {
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            font-size: x-large;
-        }
-        p {
-            padding: 1px;
-        }
-        h1 {
-            padding-top: 20px;
-        }
-        div {
-            padding-top: 1px;
-            padding-bottom: 10px;
-        }
-        a {
-            font-size: x-large;
-        }
-        button {
-            min-inline-size: 100px;
-            min-height: 30px;
-        }
+        @font-face {
+            font-family: 'Minecraft7';
+            src: url("https://no1online.cz/assets/font/Minecraft7.woff2") format('woff2'),
+                url("https://no1online.cz/assets/font/Minecraft7.woff") format('woff'),
+                url("/assets/font/Minecraft7.ttf") format('truetype');
+            }
     </style>
 </head>
-    <body>
-        <h1>404</h1>
+<body>
+    <div class="background"></div>
+    <div class="top-bar">
+        <a href="https://no1online.cz">
+            <img class="logo" src="https://no1online.cz/assets/logo/No1Online-logo64.png" alt="NoOneOnline Logo">
+        </a>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <span class="divider">|</span>
+        <a href="https://no1online.cz/downloads">Home</a>
+        <span class="divider">|</span>
+        <a href="https://no1online.cz/downloads">Downloads</a>
+        <span class="divider">|</span>
+        <a href="https://www.no1online.cz/servers">Servers</a>
+        <span class="divider">|</span>
+        <a href="https://no1online.cz/discord">Discord</a>
+        <span class="divider">|</span>
+        <a href="https://www.no1online.cz/donate">Donate</a>
+        <span class="divider">|</span>
+    </div>
+    </div>
+    <div class="content">
         <div>
-            <p>Tato stránka neexistuje!</p>
+            <img src="https://www.no1online.cz/assets/logo/N1O-logo-web.png" alt="NoOneOnline Logo">
         </div>
-        <div>
-            <a href="https://www.no1online.cz">
-                <button>RETVRN</button>
+        <div style="padding: 40px; color: aliceblue; font-size: xxx-large;">
+            <h1>
+            404
+            </h1>
+            <p>
+            Tato stránka neexistuje...
+            </p>
+            <a href="https://no1online.cz">
+                <button class="button button2"> Jdi domů</button>
             </a>
         </div>
-    </body>
+    </div>
+    <div class="bottom-bar">
+     | © 2025 NoOneOnline
+    </div>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('open');
+        }
+        function toggleGlow() {
+        const hamburger = document.getElementById('hamburger');
+        hamburger.classList.toggle('clicked');
+        }
+    </script>
+</body>
 </html>

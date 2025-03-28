@@ -29,22 +29,27 @@
 <body>
     <div class="background"></div>
     <div class="top-bar">
-        <div class="left-content">
-            <a href="https://no1online.cz">
-                <img class="logo" src="https://no1online.cz/assets/logo/No1Online-logo64.png" alt="NoOneOnline Logo">
-            </a>
-            <span class="divider">|</span>
-            <a href="https://no1online.cz/downloads">Home</a>
-            <span class="divider">|</span>
-            <a href="https://no1online.cz/downloads">Downloads</a>
-            <span class="divider">|</span>
-            <a href="https://www.no1online.cz/servers">Servers</a>
-            <span class="divider">|</span>
-            <a href="https://no1online.cz/discord">Discord</a>
-            <span class="divider">|</span>
-            <a href="https://www.no1online.cz/donate">Donate</a>
-            <span class="divider">|</span>
-        </div>
+        <a href="https://no1online.cz">
+            <img class="logo" src="https://no1online.cz/assets/logo/No1Online-logo64.png" alt="NoOneOnline Logo">
+        </a>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <span class="divider">|</span>
+        <a href="https://no1online.cz/downloads">Home</a>
+        <span class="divider">|</span>
+        <a href="https://no1online.cz/downloads">Downloads</a>
+        <span class="divider">|</span>
+        <a class="here" href="https://www.no1online.cz/servers">Servers</a>
+        <span class="divider">|</span>
+        <a href="https://no1online.cz/discord">Discord</a>
+        <span class="divider">|</span>
+        <a href="https://www.no1online.cz/donate">Donate</a>
+        <span class="divider">|</span>
+    </div>
     </div>
     <div class="content">
         <div>
@@ -55,7 +60,7 @@
             404
             </h1>
             <p>
-            This page does not yet exist
+            This page does not exist yet...
             </p>
             <a href="https://no1online.cz">
                 <button class="button button2"> Go home</button>
@@ -65,5 +70,15 @@
     <div class="bottom-bar">
      | © 2025 NoOneOnline
     </div>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('open');
+        }
+        function toggleGlow() {
+        const hamburger = document.getElementById('hamburger');
+        hamburger.classList.toggle('clicked');
+        }
+    </script>
 </body>
 </html>
