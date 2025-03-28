@@ -37,6 +37,7 @@ h1 {
 p, a {
     color: white;
     font-size: x-large;
+    line-height: 1.5;
 }
 
 p {
@@ -50,6 +51,11 @@ a {
 a:hover, .here {
     text-decoration: underline;
     text-shadow: 0 0 1px #d3d3d3, 0 0 9px #acacac, 0 0 15px #a7a7a7;
+}
+.p-intro {
+    font-size: x-large;
+    margin: 8px auto;
+    width: 80%;
 }
 
 /* ========================
