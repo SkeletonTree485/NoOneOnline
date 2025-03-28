@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Navbar</title>
+  <title>Responsive Navbar with Dividers</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -21,7 +21,8 @@
 
     .nav-links {
       display: flex;
-      gap: 20px;
+      align-items: center;
+      gap: 10px;
     }
 
     .nav-links a {
@@ -29,6 +30,10 @@
       text-decoration: none;
       padding: 8px 12px;
       display: block;
+    }
+
+    .divider {
+      color: white;
     }
 
     .hamburger {
@@ -62,6 +67,10 @@
         padding: 10px 20px;
       }
 
+      .divider {
+        display: none; /* Hides dividers when in mobile mode */
+      }
+
       .hamburger {
         display: flex;
       }
@@ -82,10 +91,13 @@
     <div></div>
   </div>
   <div class="nav-links" id="navLinks">
+    <a href="https://no1online.cz">
+        <img class="logo" src="https://no1online.cz/assets/logo/No1Online-logo64.png" alt="NoOneOnline Logo">
+    </a>
     <span class="divider">|</span>
     <a href="https://no1online.cz/downloads">Home</a>
     <span class="divider">|</span>
-    <a class="here" href="https://no1online.cz/downloads">Downloads</a>
+    <a href="https://no1online.cz/downloads">Downloads</a>
     <span class="divider">|</span>
     <a href="https://www.no1online.cz/servers">Servers</a>
     <span class="divider">|</span>
