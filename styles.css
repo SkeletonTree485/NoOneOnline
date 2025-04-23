@@ -55,7 +55,7 @@ a:hover, .here {
 .p-intro {
     font-size: x-large;
     margin: 8px auto;
-    width: 60%;
+    width: 50%;
 }
 
 /* ========================
@@ -115,7 +115,6 @@ a:hover, .here {
 .logo {
     height: 50px;
     margin-right: 11px;
-    padding-top: 15px;
 }
 
 .left-content,
