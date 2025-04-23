@@ -238,6 +238,9 @@ a:hover, .here {
         height: 4.125rem;
     }
 
+    .p-intro {
+        width: 60%;
+    }
     .nav-links {
         display: none;
         flex-direction: column;
