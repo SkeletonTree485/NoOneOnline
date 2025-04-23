@@ -115,7 +115,7 @@ a:hover, .here {
 .logo {
     height: 50px;
     margin-right: 11px;
-    background-color: red;
+    /*background-color: red;*/
 }
 
 .left-content,
