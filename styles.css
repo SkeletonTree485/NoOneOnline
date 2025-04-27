@@ -3,7 +3,7 @@
 ======================== */
 @font-face {
     font-family: 'Minecraft7';
-    src: url('path-to-font.woff2') format('woff2');
+    src: url('assets/font/Minecraft7.woff2') format('woff2');
 }
 
 /* ========================
@@ -77,6 +77,27 @@ a:hover, .here {
     box-sizing: border-box;
 }
 
+.save-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 8px auto;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: rgba(106, 102, 102, 0.3);
+  }
+
+.nice-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 8px auto;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: rgba(106, 102, 102, 0.3);
+  }
 /* ========================
    Background
 ======================== */
@@ -170,25 +191,13 @@ a:hover, .here {
     transition: 0.3s;
     font-family: 'Minecraft7', sans-serif;
 }
-
-.button1 {
-    background-color: white;
-    color: black;
-    border: 2px solid #00AAAA;
-}
-
-.button1:hover {
-    background-color: #00AAAA;
-    color: white;
-}
-
-.button2 {
+.button {
     background-color: rgba(106, 102, 102, 0.3);
     color: white;
     border: 3px solid #222;
 }
 
-.button2:hover {
+.button:hover {
     background-color: rgba(51, 51, 51, 0.7);
     text-decoration: underline;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff;
@@ -203,6 +212,16 @@ a:hover, .here {
     margin: 1px auto;
     max-width: 100%;
     display: block;
+}
+.server-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+.img-media {
+    width: 20vh;
 }
 
 /* ========================
@@ -239,7 +258,7 @@ a:hover, .here {
     }
 
     .p-intro {
-        width: 60%;
+        width: 80%;
     }
     .nav-links {
         display: none;
