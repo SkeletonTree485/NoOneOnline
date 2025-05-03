@@ -303,7 +303,7 @@ a:hover, .here {
         width: 80%;
     }
     .save-container {
-        display: hide;
+        display: none;
     }
     .mobile-not-available {
         display: flex; 
