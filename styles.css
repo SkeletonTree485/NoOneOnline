@@ -32,6 +32,13 @@ body {
 ======================== */
 h1 {
     margin-bottom: 1px;
+    padding: 40px; 
+    color: aliceblue; 
+    font-size: xxx-large;
+}
+
+h4 {
+    font-size: x-large;
 }
 
 p, a {
@@ -53,7 +60,7 @@ a:hover, .here {
     text-shadow: 0 0 1px #d3d3d3, 0 0 9px #acacac, 0 0 15px #a7a7a7;
 }
 .p-intro {
-    font-size: large;
+    font-size: x-large;
     margin: 8px auto;
     width: 60%;
 }
@@ -98,6 +105,9 @@ a:hover, .here {
     margin-bottom: 8px;
     background-color: rgba(106, 102, 102, 0.3);
   }
+.mobile-not-available {
+    display: none;
+}
 /* ========================
    Background
 ======================== */
@@ -164,7 +174,7 @@ a:hover, .here {
     background-color: #333;
     color: white;
     padding: 30px;
-    font-size: large;
+    font-size: x-large;
     text-align: left;
     font-size: 2.25vh;
     box-sizing: border-box;
@@ -291,5 +301,8 @@ a:hover, .here {
 
     .img-logo {
         width: 80%;
+    }
+    .save-container {
+        display: hide;
     }
 }
