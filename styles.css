@@ -305,4 +305,7 @@ a:hover, .here {
     .save-container {
         display: hide;
     }
+    .mobile-not-available {
+        display: flex; 
+    }
 }
