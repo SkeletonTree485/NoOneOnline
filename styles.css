@@ -34,7 +34,7 @@ h1 {
     margin-bottom: 1px;
     padding: 40px; 
     color: aliceblue; 
-    font-size: xxx-large;
+    font-size: xxxx-large;
 }
 
 h4 {
@@ -60,7 +60,7 @@ a:hover, .here {
     text-shadow: 0 0 1px #d3d3d3, 0 0 9px #acacac, 0 0 15px #a7a7a7;
 }
 .p-intro {
-    font-size: x-large;
+    font-size: 22px;
     margin: 8px auto;
     width: 60%;
 }
