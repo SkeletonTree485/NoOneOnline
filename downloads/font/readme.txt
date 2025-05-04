@@ -1,0 +1,1 @@
+Font Pixel485 currently has only EN and CZ characters! 
