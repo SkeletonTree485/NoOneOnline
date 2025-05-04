@@ -216,6 +216,8 @@ footer {
     margin: 1px auto;
     max-width: 100%;
     display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 .server-icon {
     width: 64px;
