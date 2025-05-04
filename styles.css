@@ -2,8 +2,8 @@
    Fonts
 ======================== */
 @font-face {
-    font-family: 'Minecraft7';
-    src: url('assets/font/Minecraft7.woff2') format('woff2');
+    font-family: 'Pixel485';
+    src: url('assets/font/Pixel485.woff2') format('woff2');
 }
 
 /* ========================
@@ -23,7 +23,7 @@ body {
     text-align: center;
     background-color: #202d52;
     color: white;
-    font-family: 'Minecraft7', sans-serif !important;
+    font-family: 'Pixel485', sans-serif !important;
     text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -201,7 +201,7 @@ a:hover, .here {
     font-size: x-large;
     cursor: pointer;
     transition: 0.3s;
-    font-family: 'Minecraft7', sans-serif;
+    font-family: 'Pixel485', sans-serif;
 }
 .button {
     background-color: rgba(106, 102, 102, 0.3);
