@@ -38,12 +38,12 @@ h1 {
 }
 
 h4 {
-    font-size: x-large;
+    font-size: large;
 }
 
 p, a {
     color: white;
-    font-size: x-large;
+    font-size: large;
     line-height: 1.5;
 }
 
@@ -60,7 +60,7 @@ a:hover, .here {
     text-shadow: 0 0 1px #d3d3d3, 0 0 9px #acacac, 0 0 15px #a7a7a7;
 }
 .p-intro {
-    font-size: 22px;
+    font-size: 19px;
     margin: 8px auto;
     width: 60%;
 }
@@ -137,7 +137,7 @@ a:hover, .here {
     left: 0;
     width: 100vw;
     height: 3.9rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     z-index: 9999;
     box-sizing: border-box;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
@@ -174,7 +174,7 @@ a:hover, .here {
     background-color: #333;
     color: white;
     padding: 30px;
-    font-size: x-large;
+    font-size: large;
     text-align: left;
     font-size: 2.25vh;
     box-sizing: border-box;
@@ -198,7 +198,7 @@ a:hover, .here {
     border-radius: 0;
     color: white;
     text-align: center;
-    font-size: x-large;
+    font-size: large;
     cursor: pointer;
     transition: 0.3s;
     font-family: 'Pixel485', sans-serif;
