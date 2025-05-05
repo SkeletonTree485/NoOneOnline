@@ -64,6 +64,10 @@ a:hover, .here {
     margin: 8px auto;
     width: 60%;
 }
+.not-found {
+    padding-top: 30px;
+    font-size: xxx-large;
+}
 
 /* ========================
    Layout
