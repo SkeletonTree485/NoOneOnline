@@ -37,6 +37,10 @@ h1 {
     font-size: xxxx-large;
 }
 
+h3 {
+    font-size: x-large;
+}
+
 h4 {
     font-size: large;
 }
@@ -72,6 +76,9 @@ a:hover, .here {
 /* ========================
    Layout
 ======================== */
+.section {
+    margin-top: 200px;
+}
 .content {
     flex: 1;
     padding: 123px 0;
@@ -81,36 +88,60 @@ a:hover, .here {
     z-index: 1;
 }
 
-.save-container {
-    display: flex;
-    justify-content: space-between;
+/* Nice container */
+
+
+.nice-container {
     width: 60%;
     margin: 8px auto;
-    align-items: center;
     padding: 10px;
-    margin-bottom: 8px;
     background-color: rgba(106, 102, 102, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  }
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+      .nice-container-header {
+            margin: 0 0 8px 0;
+            text-align: left;
+            text-decoration: underline;
+        }
+
+        .nice-container-content {
+            display: flex;
+            align-items: flex-start;
+        }
+        .nice-container-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: left;
+            margin-left: 16px;
+            padding-left: 16px;
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .nice-container-info p {
+            margin: 2px 0;
+        }  
+
+
+
+/*.save-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+*/
+
   .save-info {
     flex: 1;
     margin: 0;         
     text-align: left;
 }
 
-
-
-.nice-container {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    margin: 8px auto;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 8px;
-    background-color: rgba(106, 102, 102, 0.3);
-  }
 .mobile-not-available {
     display: none;
 }
@@ -147,13 +178,6 @@ a:hover, .here {
     z-index: 9999;
     box-sizing: border-box;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-}
-
-.logo {
-    height: 50px;
-    margin-right: 11px;
-    margin-top: 11px;
-    /*background-color: red;*/
 }
 
 .left-content,
@@ -199,7 +223,6 @@ footer {
     padding: 16px 32px;
     min-width: 250px;
     min-height: 64px;
-    border: none;
     border-radius: 0;
     color: white;
     text-align: center;
@@ -207,10 +230,7 @@ footer {
     cursor: pointer;
     transition: 0.3s;
     font-family: 'Pixel485', sans-serif;
-}
-.button {
     background-color: rgba(106, 102, 102, 0.3);
-    color: white;
     border: 3px solid #222;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
@@ -225,27 +245,33 @@ footer {
    Images
 ======================== */
 .img-logo {
-    width: 504px;
-    height: 152px;
+    width: auto;
+    height: 150px;
     margin: 1px auto;
     max-width: 100%;
-    display: block;
     image-rendering: pixelated;
-    image-rendering: crisp-edges;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
+
 .server-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 8px;
-    margin-right: 16px;
-    flex-shrink: 0;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  }
+        width: auto;
+        height: 100px;
+        flex-shrink: 0;
+        border-radius: 0;
+        box-shadow: none;
+        image-rendering: crisp-edges;
+        }
+
+
 .img-media {
     width: 20vh;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 11px;
+    margin-top: 11px;
+    image-rendering: pixelated;
+    /*background-color: red;*/
 }
 
 /* ========================
@@ -314,10 +340,32 @@ footer {
     .img-logo {
         width: 80%;
     }
-    .save-container {
-        display: none;
-    }
     .mobile-not-available {
         display: flex; 
+    }
+    .nice-container-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+                
+        } 
+    .nice-container-header {
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 24px;
+        }
+    .server-icon {
+        margin-bottom: 10px;
+        }
+    .nice-container-info {
+        margin-left: 0;
+        border-left: none;
+        align-items: left;
+        }
+        .nice-container-content a {
+            margin-left: 0 !important;
+            margin-top: 24px;
+            align-self: center;
     }
 }

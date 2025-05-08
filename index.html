@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jsme malý Minecraft server zaměřený na vanilla survival. Na této stránce najdeš vše podstatné ohledně naší komunity. ">
+    <meta name="description" content="Jsme malý Minecraft server zaměřený na vanilla survival. Na této stránce najdeš vše podstatné ohledně naší komunity.">
     <meta name="keywords" content="minecraft, no1online, n01online, vanilla, survival, skeletontree485, discord, save, no one online">
     <meta property="og:title" content="NoOneOnline Minecraft">
     <meta property="og:description" content="NoOneOnline Website">
@@ -11,33 +11,53 @@
     <meta property="og:url" content="https://www.no1online.cz">
     <meta property="og:site_name" content="NoOneOnline">
     <meta name="theme-color" content="#333">
-    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="/styles.css">
     <title>NoOneOnline Minecraft</title>
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.no1online.cz/assets/logo/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://www.no1online.cz/assets/logo/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://www.no1online.cz/assets/logo/favicon/favicon-16x16.png">
     <link rel="manifest" href="https://www.no1online.cz/assets/logo/favicon/site.webmanifest">
+
     <style>
         @font-face {
             font-family: 'Pixel485';
             src: url("https://no1online.cz/assets/font/Pixel485.woff2") format('woff2'),
-                url("https://no1online.cz/assets/font/Pixel485.woff") format('woff'),
-                url("/assets/font/Pixel485.ttf") format('truetype');
-            }
+                 url("https://no1online.cz/assets/font/Pixel485.woff") format('woff'),
+                 url("/assets/font/Pixel485.ttf") format('truetype');
+        }
+        .nice-container-info p {
+            margin: 2px 0;
+        }
+
+        .status-online {
+            color: green;
+        }
+
+        .status-offline {
+            color: red;
+        }
+
+        .status-maintenance {
+            color: orange;
+        }
+
+        .error-message {
+            color: darkred;
+    }
     </style>
 </head>
 <body>
     <div class="background"></div>
-    <div class="top-bar">
-            <a href="https://no1online.cz">
-                <img class="logo" src="https://no1online.cz/assets/logo/No1Online-logo64.png" alt="NoOneOnline Logo">
-            </a>
-        <div class="hamburger" onclick="toggleMenu()">
+    <header class="top-bar">
+        <a href="https://no1online.cz">
+            <img class="logo" src="https://www.no1online.cz/assets/logo/No1Online-logo64.png" alt="NoOneOnline Logo">
+        </a>
+        <div id="hamburger" class="hamburger" role="button" aria-label="Toggle menu" onclick="toggleMenu(); toggleGlow();">
             <div></div>
             <div></div>
             <div></div>
-          </div>
-        <div class="nav-links" id="navLinks">
+        </div>
+        <nav class="nav-links" id="navLinks">
             <a class="here" href="https://www.no1online.cz">Domů</a>
             <span class="divider">|</span>
             <a href="https://www.no1online.cz/downloads">Archiv</a>
@@ -47,61 +67,153 @@
             <a href="https://no1online.cz/discord">Discord</a>
             <span class="divider">|</span>
             <a href="https://www.no1online.cz/donate">Přispět</a>
-        </div>
-    </div>
+        </nav>
+    </header>
+
     <div class="content">
         <div class="img-logo">
-            <img src="https://www.no1online.cz/assets/logo/N1O-logo-web.png" alt="NoOneOnline Logo">
+            <img src="assets/logo/NoOneO-logo-large.png" alt="NoOneOnline Logo">
         </div>
-        <!--content-->
+
         <div id="intro">
-            <h4>| Něco o nás</h4>
+            <h3>| Něco o nás</h3>
             <p class="p-intro">
-            NoOneOnline je malá, ale o to více přátelská komunita Minecraft hráčů. Tady najdeš vše, co s naším serverem souvisí ať už to budou  statusy serverů, staré světy ke stažení, pravidla, nebo obrázky a rendery.
-            Předem upozorňuji, že tato stránka je teprve ve výstavbě, takže omluvte, pokud něco nebude fungovat (:
+                NoOneOnline je malá, ale o to více přátelská komunita Minecraft hráčů. Tady najdeš vše, co s naším serverem souvisí ať už to budou statusy serverů, staré světy ke stažení, pravidla, nebo obrázky a rendery.
+                Předem upozorňuji, že tato stránka je teprve ve výstavbě, takže omluvte, pokud něco nebude fungovat (:
             </p>
         </div>
-        <div class="button-container">
-            <h4>| Dynamické mapy</h4>
-            <a href="http://mc.no1online.cz:8085">
-                <button class="button button">Creative Mapa</button>
-            </a>
-            <a href="http://vanilla.no1online.cz:36978">
-                <button class="button button">Vanilla Mapa</button>
-            </a>
-        </div>
-        <div id="downloads">
-            <h4>| Archiv - světy ke stažení</h4>
-            <div class="save-container">
-                <p class="save-info">
-                    Season 4 - Vanilla <br>
-                    K datu: 1/2025 <br>
-                    Verze: 1.21.1 <br>
-                    Velikost: 132,2 MB
-                </p>
-                <a href="https://www.icloud.com/iclouddrive/076qkiR9SaoriSnIm6XN0f8gg#NoOneOnlineS4_-_leden_25">
-                    <button class="button">Stáhnout</button>
-                </a>
+
+        <div style="section" id="servers">
+            <h3>| Servery</h3>
+            <div id="server-status-container">
+
+                <div class="nice-container" id="server-mc-no1online-cz">
+                    <h4 class="nice-container-header">mc.no1online.cz</h4>
+                    <div class="nice-container-content">
+                        <img class="server-icon" id="icon-mc-no1online-cz" src="" alt="Server Icon" />
+                        <div class="nice-container-info">
+                            <p>Status: <span id="status-mc-no1online-cz"></span></p>
+                            <p>Version: <span id="version-mc-no1online-cz"></span></p>
+                            <p>Players: <span id="players-mc-no1online-cz"></span></p>
+                        </div>
+                        <a href="http://www.no1online.cz/maps/mc" style="margin-left:auto;">
+                            <button class="button">Dynmapa</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nice-container" id="server-test-no1online-cz">
+                    <h4 class="nice-container-header">vanilla.no1online.cz</h4>
+                    <div class="nice-container-content">
+                        <img class="server-icon" id="icon-test-no1online-cz" src="" alt="Server Icon" />
+                        <div class="nice-container-info">
+                            <p>Status: <span id="status-test-no1online-cz"></span></p>
+                            <p>Version: <span id="version-test-no1online-cz"></span></p>
+                            <p>Players: <span id="players-test-no1online-cz"></span></p>
+                        </div>
+                        <a href="http://www.no1online.cz/maps/vanilla" style="margin-left:auto;">
+                            <button class="button">Dynmapa</button>
+                        </a>
+                    </div>
+                </div>
+
             </div>
+            <div id="error-message"></div>
         </div>
+        <div style="section" id="downloads">
+            <h3>| Archiv - světy ke stažení</h3>
+            <div class="nice-container">
+              <h4 class="nice-container-header">Season 4 – Vanilla</h4>
+              <div class="nice-container-content">
+                <div class="nice-container-info">
+                  <p>K datu: <strong>1/2025</strong></p>
+                  <p>Verze: <strong>1.21.1</strong></p>
+                  <p>Velikost: <strong>132,2 MB</strong></p>
+                </div>
+                <a href="https://www.icloud.com/iclouddrive/076qkiR9SaoriSnIm6XN0f8gg#NoOneOnlineS4_-_leden_25" style="margin-left:auto;">
+                  <button class="button">Stáhnout</button>
+                </a>
+              </div>
+            </div>
+
+        </div>
+
         <div style="padding-top: 10px;">
             <a href="https://www.no1online.cz/downloads">Načíst více...</a>
         </div>
     </div>
-    <!--end of content-->
+
     <footer>
         <p>| © 2025 NoOneOnline <br>
         <a href="mailto:admin@no1online.cz">admin@no1online.cz</a></p>
     </footer>
+
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('open');
         }
+
         function toggleGlow() {
-        const hamburger = document.getElementById('hamburger');
-        hamburger.classList.toggle('clicked');
+            const hamburger = document.getElementById('hamburger');
+            hamburger.classList.toggle('clicked');
         }
+
+        const servers = [
+            {
+                id: "mc-no1online-cz",
+                url: "https://api.mcsrvstat.us/3/mc.no1online.cz"
+            },
+            {
+                id: "test-no1online-cz",
+                url: "https://api.mcsrvstat.us/3/test.no1online.cz"
+            }
+        ];
+
+        async function fetchStatus(server) {
+            try {
+                const response = await fetch(server.url);
+                if (!response.ok) throw new Error("Network error");
+                const data = await response.json();
+
+                const iconEl = document.getElementById(`icon-${server.id}`);
+                const statusEl = document.getElementById(`status-${server.id}`);
+                const versionEl = document.getElementById(`version-${server.id}`);
+                const playersEl = document.getElementById(`players-${server.id}`);
+
+                if (data.version === "Maintenance") {
+                    statusEl.textContent = "Maintenance";
+                    statusEl.className = "status-maintenance";
+                } else if (data.online) {
+                    statusEl.textContent = "Online";
+                    statusEl.className = "status-online";
+                } else {
+                    statusEl.textContent = "Offline";
+                    statusEl.className = "status-offline";
+                }
+
+                versionEl.textContent = data.version || "N/A";
+                playersEl.textContent = data.players?.online + "/" + data.players?.max || "N/A";
+
+                if (data.icon) {
+                    iconEl.src = data.icon;
+                } else {
+                    iconEl.src = "";
+                }
+            } catch (error) {
+                document.getElementById("error-message").textContent =
+                    "Failed to fetch server data. Please try again later.";
+                console.error(error);
+            }
+        }
+
+        function fetchAllStatus() {
+            document.getElementById("error-message").textContent = "";
+            servers.forEach(fetchStatus);
+        }
+
+        fetchAllStatus();
+        setInterval(fetchAllStatus, 30000);
     </script>
 </body>
 </html>
