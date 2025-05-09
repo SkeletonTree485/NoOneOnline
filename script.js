@@ -33,7 +33,7 @@ function changeBackground() {
 }
 
 // Change background every 5 seconds
-setInterval(changeBackground, 1000);
+setInterval(changeBackground, 10000);
 
 // Initial background change
 changeBackground();
