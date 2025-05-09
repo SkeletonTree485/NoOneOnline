@@ -352,7 +352,7 @@ footer p {
         image-rendering: pixelated;
         }
     .nice-container {
-        width: 90%;
+        width: 80%;
         }
     .nice-container-content {
         flex-direction: column;
