@@ -15,25 +15,26 @@ const images = [
   // Add as many images as you want
 ];
 
-const backgroundDiv = document.querySelector('.background');
+const bgA = document.querySelector('.background-a');
+const bgB = document.querySelector('.background-b');
+
+let current = bgA;
+let next = bgB;
 
 function changeBackground() {
-  if (!backgroundDiv) return;
+  const randomImage = images[Math.floor(Math.random() * images.length)];
 
-  // Fade out
-  backgroundDiv.style.opacity = 0;
+  // Set new image on the hidden layer
+  next.style.backgroundImage = `url(${randomImage})`;
 
-  setTimeout(() => {
-    const randomImage = images[Math.floor(Math.random() * images.length)];
-    backgroundDiv.style.backgroundImage = `url(${randomImage})`;
+  // Start crossfade
+  next.style.opacity = 1;
+  current.style.opacity = 0;
 
-    // Fade back in
-    backgroundDiv.style.opacity = 1;
-  }, 500); // Halfway through the transition
+  // Swap the layers
+  [current, next] = [next, current];
 }
 
-// Change background every 5 seconds
-setInterval(changeBackground, 10000);
-
-// Initial background change
+// Initial setup
 changeBackground();
+setInterval(changeBackground, 10000);
