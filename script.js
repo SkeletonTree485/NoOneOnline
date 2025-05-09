@@ -1,6 +1,6 @@
 const images = [
   'assets/image/background/bakery-season1-shader.jpeg',
-'assets/image/background/boat-water-moon-night-shader.jpeg'
+'assets/image/background/boat-water-moon-night-shader.jpeg',
 'assets/image/background/coral-reef-underwater-blue-reflections-shader.jpeg',
 'assets/image/background/jungle-bamboo-landscape-shader.jpeg',
 'assets/image/background/jungle-sky-shader.jpeg',
