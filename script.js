@@ -15,6 +15,12 @@ const images = [
   // Add as many images as you want
 ];
 
+const preloadImages = images.map(src => {
+  const img = new Image();
+  img.src = src;
+  return img;
+});
+
 const bgA = document.querySelector('.background-a');
 const bgB = document.querySelector('.background-b');
 
