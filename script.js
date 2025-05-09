@@ -15,13 +15,21 @@ const images = [
   // Add as many images as you want
 ];
 
-// Function to change the background image
+const backgroundDiv = document.querySelector('.background');
+
 function changeBackground() {
-  const randomImage = images[Math.floor(Math.random() * images.length)];
-  const backgroundDiv = document.querySelector('.background');
-  if (backgroundDiv) {
+  if (!backgroundDiv) return;
+
+  // Fade out
+  backgroundDiv.style.opacity = 0;
+
+  setTimeout(() => {
+    const randomImage = images[Math.floor(Math.random() * images.length)];
     backgroundDiv.style.backgroundImage = `url(${randomImage})`;
-  }
+
+    // Fade back in
+    backgroundDiv.style.opacity = 1;
+  }, 500); // Halfway through the transition
 }
 
 // Change background every 5 seconds
