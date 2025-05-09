@@ -344,16 +344,19 @@ footer p {
     }
 
     .img-logo {
-        width: 80%;
-    }
-    .mobile-not-available {
-        display: flex; 
-    }
+        width: 90%;
+        height: auto;
+        margin: 1px auto;
+        max-width: 100%;
+        image-rendering: pixelated;
+        }
+    .nice-container {
+        width: 90%;
+        }
     .nice-container-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
-                
         } 
     .nice-container-header {
         margin: 0 0 8px 0;
