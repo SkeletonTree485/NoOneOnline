@@ -43,4 +43,4 @@ function changeBackground() {
 
 // Initial setup
 changeBackground();
-setInterval(changeBackground, 10000);
+setInterval(changeBackground, 15000);

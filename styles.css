@@ -159,7 +159,7 @@ a:hover, .here {
     background-position: center;
     z-index: -1;
     filter: blur(0.5px);
-    transition: opacity 1s ease-in-out;
+    transition: opacity 5s ease-in-out;
     opacity: 1;
 }
 
