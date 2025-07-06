@@ -1,18 +1,18 @@
 const images = [
-  'assets/image/background/bakery-season1-shader.jpeg',
-'assets/image/background/boat-water-moon-night-shader.jpeg',
-'assets/image/background/coral-reef-underwater-blue-reflections-shader.jpeg',
-'assets/image/background/jungle-bamboo-landscape-shader.jpeg',
-'assets/image/background/jungle-sky-shader.jpeg',
-'assets/image/background/jungle-watermelon-shader.jpeg',
-'assets/image/background/lake-jungle-bamboo-shader.jpeg',
-'assets/image/background/lake-jungle-landscape-shader.jpeg',
-'assets/image/background/lake-jungle-top-shader.jpeg',
-'assets/image/background/landscape-foggy-shader.jpeg',
-'assets/image/background/squid-underwater-blue-kelp-shader.jpeg',
-'assets/image/background/squid-underwater-deepblue-kelp-shader.jpeg',
-'assets/image/background/townhall-season4-shader.jpeg',
-  // too many images? add couple new, remove some old
+  '/assets/image/background/bakery-season1-shader.jpeg',
+'/assets/image/background/boat-water-moon-night-shader.jpeg',
+'/assets/image/background/coral-reef-underwater-blue-reflections-shader.jpeg',
+'/assets/image/background/jungle-bamboo-landscape-shader.jpeg',
+'/assets/image/background/jungle-sky-shader.jpeg',
+'/assets/image/background/jungle-watermelon-shader.jpeg',
+'/assets/image/background/lake-jungle-bamboo-shader.jpeg',
+'/assets/image/background/lake-jungle-landscape-shader.jpeg',
+'/assets/image/background/lake-jungle-top-shader.jpeg',
+'/assets/image/background/landscape-foggy-shader.jpeg',
+'/assets/image/background/squid-underwater-blue-kelp-shader.jpeg',
+'/assets/image/background/squid-underwater-deepblue-kelp-shader.jpeg',
+'/assets/image/background/townhall-season4-shader.jpeg',
+  // too many images perhaps? add couple new, remove some old -- for future me
 ];
 
 const preloadImages = images.map(src => {
