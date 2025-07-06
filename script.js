@@ -12,7 +12,7 @@ const images = [
 'assets/image/background/squid-underwater-blue-kelp-shader.jpeg',
 'assets/image/background/squid-underwater-deepblue-kelp-shader.jpeg',
 'assets/image/background/townhall-season4-shader.jpeg',
-  // Add as many images as you want
+  // too many images? add couple new, remove some old
 ];
 
 const preloadImages = images.map(src => {
@@ -30,17 +30,17 @@ let next = bgB;
 function changeBackground() {
   const randomImage = images[Math.floor(Math.random() * images.length)];
 
-  // Set new image on the hidden layer
+  // new image on hidden layer
   next.style.backgroundImage = `url(${randomImage})`;
 
-  // Start crossfade
+  // crossfade
   next.style.opacity = 1;
   current.style.opacity = 0;
 
-  // Swap the layers
+  // swapping layers
   [current, next] = [next, current];
 }
 
-// Initial setup
+// setup
 changeBackground();
 setInterval(changeBackground, 15000);

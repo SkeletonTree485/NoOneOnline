@@ -88,16 +88,17 @@
 
         <div class="section" id="servers">
             <h3>| Servery</h3>
+            <div style="color: red;" id="error-message"></div>
             <div id="server-status-container">
 
-                <div class="nice-container" id="server-main-no1online-cz">
+                <div class="nice-container" id="server-server1">
                     <h4 translate="no" class="nice-container-header">mc.no1online.cz</h4>
                     <div class="nice-container-content">
-                        <img class="server-icon" id="icon-mc-no1online-cz" src="" alt="Server Icon" />
+                        <img class="server-icon" id="icon-server1" src="" alt="Server Icon" />
                         <div class="nice-container-info">
-                            <p>Status: <span id="status-mc-no1online-cz"></span></p>
-                            <p>Version: <span id="version-mc-no1online-cz"></span></p>
-                            <p>Players: <span id="players-mc-no1online-cz"></span></p>
+                            <p>Status: <span id="status-server1"></span></p>
+                            <p>Version: <span id="version-server1"></span></p>
+                            <p>Players: <span id="players-server1"></span></p>
                         </div>
                         <a href="http://www.no1online.cz/maps/mc" style="margin-left:auto;">
                             <button class="button">Dynmapa</button>
@@ -105,14 +106,14 @@
                     </div>
                 </div>
 
-                <div class="nice-container" id="server-server1-no1online-cz">
+                <div class="nice-container" id="server-server2">
                     <h4 translate="no" class="nice-container-header">survival.no1online.cz</h4>
                     <div class="nice-container-content">
-                        <img class="server-icon" id="icon-test-no1online-cz" src="" alt="Server Icon" />
+                        <img class="server-icon" id="icon-server2" src="" alt="Server Icon" />
                         <div class="nice-container-info">
-                            <p>Status: <span id="status-test-no1online-cz"></span></p>
-                            <p>Version: <span id="version-test-no1online-cz"></span></p>
-                            <p>Players: <span id="players-test-no1online-cz"></span></p>
+                            <p>Status: <span id="status-server2"></span></p>
+                            <p>Version: <span id="version-server2"></span></p>
+                            <p>Players: <span id="players-server2"></span></p>
                         </div>
                         <a href="http://www.no1online.cz/maps/survival" style="margin-left:auto;">
                             <button class="button">Dynmapa</button>
@@ -121,7 +122,6 @@
                 </div>
 
             </div>
-            <div id="error-message"></div>
         </div>
         <div class="section" id="downloads">
             <h3>| Archiv </h3>
@@ -161,11 +161,11 @@
 
         const servers = [
             {
-                id: "main-no1online-cz",
+                id: "server1",
                 url: "https://api.mcsrvstat.us/3/mc.no1online.cz"
             },
             {
-                id: "server2-no1online-cz",
+                id: "server2",
                 url: "https://api.mcsrvstat.us/3/survival.no1online.cz"
             }
         ];

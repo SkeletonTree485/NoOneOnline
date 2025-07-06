@@ -224,6 +224,7 @@ footer {
 footer p {
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     margin-left: 16px;
+    padding-left: 16px;
 
 }
 
