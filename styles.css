@@ -246,7 +246,7 @@ footer p {
     text-align: center;
     font-size: large;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.1s;
     font-family: 'Pixel485', sans-serif;
     background-color: rgba(106, 102, 102, 0.3);
     border: 3px solid #222;
@@ -332,6 +332,9 @@ footer p {
 
     .p-intro {
         width: 80%;
+        text-align: justify;
+        text-justify: initial;
+        hyphens: auto;
     }
     .nav-links {
         display: none;
