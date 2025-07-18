@@ -4,14 +4,14 @@ const images = [
 '/assets/image/background/coral-reef-underwater-blue-reflections-shader.jpeg',
 '/assets/image/background/jungle-bamboo-landscape-shader.jpeg',
 '/assets/image/background/jungle-sky-shader.jpeg',
-'/assets/image/background/jungle-watermelon-shader.jpeg',
 '/assets/image/background/lake-jungle-bamboo-shader.jpeg',
-'/assets/image/background/lake-jungle-landscape-shader.jpeg',
 '/assets/image/background/lake-jungle-top-shader.jpeg',
 '/assets/image/background/landscape-foggy-shader.jpeg',
-'/assets/image/background/squid-underwater-blue-kelp-shader.jpeg',
 '/assets/image/background/squid-underwater-deepblue-kelp-shader.jpeg',
 '/assets/image/background/townhall-season4-shader.jpeg',
+'/assets/image/background/lobby-day.jpeg',
+'/assets/image/background/lobby-galaxy.jpeg',
+'/assets/image/background/lobby-sunset.jpeg'
   // too many images perhaps? add couple new, remove some old -- for future me
 ];
 
