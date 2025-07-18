@@ -11,7 +11,7 @@ const images = [
 '/assets/image/background/townhall-season4-shader.jpeg',
 '/assets/image/background/lobby-day.jpeg',
 '/assets/image/background/lobby-galaxy.jpeg',
-'/assets/image/background/lobby-sunset.jpeg'
+'/assets/image/background/lobby-sunset.jpeg',
   // too many images perhaps? add couple new, remove some old -- for future me
 ];
 
