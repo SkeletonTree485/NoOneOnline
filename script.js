@@ -1,46 +1,84 @@
-const images = [
+// base url, because why not
+const BASE_URL = 'https://www.no1online.cz';
+
+// image list
+const imagePaths = [
   '/assets/image/background/bakery-season1-shader.jpeg',
-'/assets/image/background/boat-water-moon-night-shader.jpeg',
-'/assets/image/background/coral-reef-underwater-blue-reflections-shader.jpeg',
-'/assets/image/background/jungle-bamboo-landscape-shader.jpeg',
-'/assets/image/background/jungle-sky-shader.jpeg',
-'/assets/image/background/lake-jungle-bamboo-shader.jpeg',
-'/assets/image/background/lake-jungle-top-shader.jpeg',
-'/assets/image/background/landscape-foggy-shader.jpeg',
-'/assets/image/background/squid-underwater-deepblue-kelp-shader.jpeg',
-'/assets/image/background/townhall-season4-shader.jpeg',
-'/assets/image/background/lobby-day.jpeg',
-'/assets/image/background/lobby-galaxy.jpeg',
-'/assets/image/background/lobby-sunset.jpeg',
-  // too many images perhaps? add couple new, remove some old -- for future me
+  '/assets/image/background/boat-water-moon-night-shader.jpeg',
+  '/assets/image/background/coral-reef-underwater-blue-reflections-shader.jpeg',
+  '/assets/image/background/jungle-bamboo-landscape-shader.jpeg',
+  '/assets/image/background/jungle-sky-shader.jpeg',
+  '/assets/image/background/lake-jungle-bamboo-shader.jpeg',
+  '/assets/image/background/lake-jungle-top-shader.jpeg',
+  '/assets/image/background/landscape-foggy-shader.jpeg',
+  '/assets/image/background/squid-underwater-deepblue-kelp-shader.jpeg',
+  '/assets/image/background/townhall-season4-shader.jpeg',
+  '/assets/image/background/lobby-day.jpeg',
+  '/assets/image/background/lobby-galaxy.jpeg',
+  '/assets/image/background/lobby-sunset.jpeg',
 ];
 
-const preloadImages = images.map(src => {
-  const img = new Image();
-  img.src = src;
-  return img;
-});
+// adding domain to images
+const images = imagePaths.map(path => `${BASE_URL}${path}`);
 
+// image preloads?
+const preloadImages = [];
+
+// ????
+function preloadSequentially(index = 0) {
+  if (index >= images.length) return;
+  const img = new Image();
+  img.src = images[index];
+  preloadImages.push(img);
+  img.onload = () => preloadSequentially(index + 1);
+}
+preloadSequentially();
+
+// backgrounds
 const bgA = document.querySelector('.background-a');
 const bgB = document.querySelector('.background-b');
 
 let current = bgA;
 let next = bgB;
+let lastIndex = -1;
 
+// background changing
 function changeBackground() {
-  const randomImage = images[Math.floor(Math.random() * images.length)];
+  if (preloadImages.length === 0) return;
 
-  // new image on hidden layer
-  next.style.backgroundImage = `url(${randomImage})`;
+  let index;
+  do {
+    index = Math.floor(Math.random() * preloadImages.length);
+  } while (index === lastIndex && preloadImages.length > 1);
+  lastIndex = index;
 
-  // crossfade
-  next.style.opacity = 1;
-  current.style.opacity = 0;
+  const image = preloadImages[index];
+  next.style.backgroundImage = `url(${image.src})`;
 
-  // swapping layers
+  next.style.opacity = '1';
+  current.style.opacity = '0';
+
   [current, next] = [next, current];
 }
 
-// setup
+// looop?????
+let lastTime = 0;
+const interval = 15000;
+
+function animationLoop(timestamp) {
+  if (timestamp - lastTime >= interval) {
+    changeBackground();
+    lastTime = timestamp;
+  }
+  requestAnimationFrame(animationLoop);
+}
+
+// initial
 changeBackground();
-setInterval(changeBackground, 15000);
+requestAnimationFrame(animationLoop);
+
+
+
+
+
+// okay, i must admit, this was vibecoded. Luckily i know what it does, but i was just too lazy to do it myself. I promise, i'll try to do better in the future. 
