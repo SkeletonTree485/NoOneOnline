@@ -67,7 +67,7 @@ a:hover, .here {
     font-size: 19px;
     margin: 8px auto;
     width: 60%;
-    text-align: right;
+    text-align: left;
 }
 .not-found {
     padding-top: 30px;
