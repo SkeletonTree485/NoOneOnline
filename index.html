@@ -104,7 +104,7 @@
                     </div>
                 </div>
 
-                <div class="nice-container" id="server-server2">
+                <div style="display: none;" class="nice-container" id="server-server2">
                     <h4 translate="no" class="nice-container-header">survival.no1online.cz</h4>
                     <div class="nice-container-content">
                         <img class="server-icon" id="icon-server2" src="" alt="Server Icon" />
@@ -190,7 +190,7 @@
                     statusEl.className = "status-offline";
                 }
 
-                versionEl.textContent = data.version || "N/A";
+                versionEl.textContent = data.version || "1.X.X";
                 playersEl.textContent = data.players?.online + "/" + data.players?.max || "N/A";
 
                 if (data.icon) {
@@ -211,7 +211,7 @@
         }
 
         fetchAllStatus();
-        setInterval(fetchAllStatus, 30000);
+        setInterval(fetchAllStatus, 40000);
     </script>
     <script src="script.js"></script>
 </body>
